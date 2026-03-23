@@ -103,17 +103,20 @@ pytest tests/
 
 ```text
 ha-meeting-summarizer/
-├── README.md
-├── requirements.txt
 ├── ha_meeting_summarizer/
 │   ├── __init__.py
 │   ├── ha_summarizer.py
 │   └── utils.py
 ├── examples/
 │   ├── sample_meeting.txt
-│   └── run_example.py
-└── tests/
-    └── test_ha_summarizer.py
+│   ├── sample_meeting.wav
+│   ├── run_example.py
+│   └── generate_sample_audio.py
+├── tests/
+│   └── test_ha_summarizer.py
+├── requirements.txt
+├── README.md
+└── .gitignore
 ```
 
 ---
