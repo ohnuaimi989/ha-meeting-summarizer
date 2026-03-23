@@ -5,12 +5,14 @@ Offline-first, production-ready meeting summarizer for Home Assistant. Summarize
 ---
 
 ## Features
-- Offline-first summarization using Hugging Face transformers
+- Offline-first summarization using Hugging Face using Hugging Face (BART/T5)
 - Optional online summarization with OpenAI GPT
+- Offline audio summarization:
+    - Converts audio files (`.wav` / `.mp3`) to text using Whisper.  
+    - Summarizes the resulting transcript using the offline summarizer. 
 - Summarizes text strings or meeting transcript files
-- Ready for Home Assistant automations
-- Configurable models and backends
-- Logging, error handling, and unit tests included
+- Configurable models, logging, and error handling
+- Examples and unit tests for easy demonstration and testing
 
 ---
 
@@ -23,6 +25,13 @@ Install dependencies:
 ```bash
 pip install -r requirements.txt
 ````
+
+> ⚠️ **System dependency:** FFmpeg must be installed for audio file support.
+>
+> * Ubuntu: `sudo apt install ffmpeg`
+> * macOS: `brew install ffmpeg`
+> * Windows: Download from [https://ffmpeg.org/download.html](https://ffmpeg.org/download.html)
+
 
 For online GPT models, set your OpenAI API key:
 
@@ -42,6 +51,14 @@ from ha_meeting_summarizer.ha_summarizer import HASummarizer
 summarizer = HASummarizer()  # defaults to offline Hugging Face
 summary = summarizer.summarize_file("examples/sample_meeting.txt")
 print(summary)
+```
+
+### **Offline audio summarization**
+
+```python
+summary_audio = summarizer.summarize_audio("examples/sample_meeting.wav")
+print("Offline audio summary:")
+print(summary_audio)
 ```
 
 ### Online summarization (optional)
@@ -77,6 +94,8 @@ pytest tests/
 * `torch>=2.0.0` (required for transformers)
 * `openai>=0.27.0` (online summarization)
 * `pytest>=7.0.0` (testing)
+* `torchaudio>=2.1.0
+* `System dependency: FFmpeg for audio support.
 
 ---
 
