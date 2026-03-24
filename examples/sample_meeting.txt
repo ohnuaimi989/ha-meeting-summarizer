@@ -1,15 +1,15 @@
-Team Meeting - June 23, 2025
+Team Meeting - 23 June 2025
 
 Attendees: Alice, Bob, Carol, Dave
 
 Agenda:
-1. Review Q2 roadmap
+1. Review Q3 roadmap
 2. Update on marketing campaigns
 3. Engineering project deadlines
 4. Miscellaneous announcements
 
 Discussion:
-- Alice presented the Q2 roadmap and highlighted priority features.
+- Alice presented the Q3 roadmap and highlighted priority features.
 - Bob reported on ongoing marketing campaigns, noting the need for more social media engagement.
 - Carol shared updates on engineering projects and confirmed deadlines are on track.
 - Dave raised a question about budget allocation for new hires.
@@ -18,4 +18,4 @@ Discussion:
 Action Items:
 - Marketing team to increase social media outreach by next month.
 - Engineering team to submit progress report by Friday.
-- Schedule budget review meeting for June 30, 2025.
+- Schedule budget review meeting for 30 June 2025.
